@@ -1,0 +1,117 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos para Pagamento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #e50914;
+        }
+        h2 {
+            color: #f1c40f;
+        }
+        #carrossel-container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #modelos {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+        .modelo {
+            flex: 0 0 auto;
+            width: 250px;
+            background-color: #333;
+            border-radius: 12px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .modelo:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .modelo img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            border: 2px solid #e50914;
+        }
+        .modelo p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+        .modelo .preco {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+.border {
+    border: 3px solid #e50914; /* Cor vermelha */
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Cor do texto */
+    background-color: #141414; /* Fundo preto */
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0\.1);
+}
+    </style>
+    <script>
+        function redirecionarParaPagamento(modelo, valor) {
+            const url = `/Paypalpayment.html?modelo=${encodeURIComponent(modelo)}&valor=${encodeURIComponent(valor)}`;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Escolha seu Modelo</h1>
+    <div id="carrossel-container">
+        <div id="modelos">
+            <div class="modelo" onclick="redirecionarParaPagamento('Modelo Tradicional', '5.00')">
+                <img src="/654141.png" alt="Modelo Tradicional" />
+                <p>Modelo Simples</p>
+                <p class="preco">R$ 5,00</p>
+            </div>
+            <div class="modelo" onclick="redirecionarParaPagamento('Modelo Moderno', '8.00')">
+                <img src="/CV-or-Resume-Icon-Graphics-13336606-1.jpg" alt="Modelo Moderno" />
+                <p>Modelo Moderno</p>
+                <p class="preco">$ 8,00</p>
+            </div>
+            <div class="modelo" onclick="redirecionarParaPagamento('Modelo Black & White', '11,5.00')">
+                <img src="/942799.png" alt="Modelo Black & White" />
+                <p>Modelo Black & White</p>
+                <p class="preco">R$ 12,00</p>
+            </div>
+        </div>
+    </div>
+<div class="border">
+    <p>
+        A cada novo dia, nos dedicamos a criar modelos inovadores, proporcionando uma vasta gama de opções\. Desfrute da sua escolha com satisfação e confiança\.
+    </p>
+</div>
+</body>
+</html>
+
